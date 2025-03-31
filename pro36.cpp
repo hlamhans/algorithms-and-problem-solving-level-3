@@ -28,7 +28,6 @@ short CountWord(string str)
 		count++;// it counts the last word of the string
 	return count;
 }
-
 int main()
 {
 	string str = ReadString();
