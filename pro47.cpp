@@ -16,7 +16,7 @@
 #include <fstream>
 using namespace std;
 
-const string ClientsFileName = "Clients.txt";
+const string ClientsFileName = "File.txt";
 struct sClient
 {
     string AccountNumber;
@@ -65,7 +65,7 @@ void AddDataLineToFile(string FileName, string stDataLine)
     MyFile.open(FileName, ios::out | ios::app);
     if(MyFile.is_open())
     {
-        MyFile << stDataLine;
+        MyFile << stDataLine<<endl;
         MyFile.close();
     }
 }
@@ -79,7 +79,7 @@ void AddClient()
     char AddMore = 'Y';
     do
     {
-        system("cls");
+        system("clear");
         cout<<"Adding new Client:\n\n";
         AddNewClient();
         cout<<"\nClient Added Successfully, do you want to addmore clients? Y/N?";
@@ -91,4 +91,5 @@ void AddClient()
 int main()
 {
     AddClient();
+    system("pause>0");
 }
